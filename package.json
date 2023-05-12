@@ -1,0 +1,56 @@
+{
+  "name": "config_products_cpids",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/http-client": "^3.1.1",
+    "@sap/cds": "^6",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
+    "express": "^4",
+    "hdb": "^0.19.0",
+    "@sap/xssec": "^3",
+    "passport": "^0"
+  },
+  "devDependencies": {
+    "sqlite3": "^5"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "hana"
+      },
+      "ConfigProd": {
+        "kind": "odata-v2",
+        "model": "srv/external/ConfigProd",
+        "[development]": {
+          "credentials": {
+            "url": "https://sbpbtp-vcpprovider-sc0jeojq-dev-config-products-srv.cfapps.us10.hana.ondemand.com/v2/btpcpi",
+            "authentication": "BasicAuthentication",
+            "username": "S0017717840",
+            "password": "Th@kur18"
+          }
+        },
+        "[production]": {
+          "credentials": {
+            "destination": "ConfigProd",
+            "path": "/v2/btpcpi"
+          }
+        }
+      },
+      "auth": {
+        "kind": "xsuaa",
+        "restrict_all_services": false
+      }
+    },
+    "hana": {
+      "deploy-format": "hdbtable",
+      "syntax": "hdi"
+    }
+  }
+}
