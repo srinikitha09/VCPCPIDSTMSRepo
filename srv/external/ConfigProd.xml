@@ -9,32 +9,28 @@
         <EntitySet Name="getLocProdCharAPI" EntityType="BTPCPIService.getLocProdCharAPI"/>
         <EntitySet Name="getLocProdActDemandAPI" EntityType="BTPCPIService.getLocProdActDemandAPI"/>
       </EntityContainer>
-      <EntityType Name="getLocProdCharAPI">
+     <EntityType Name="getLocProdCharAPI">
         <Key>
-          <PropertyRef Name="LOCATION_ID"/>
-          <PropertyRef Name="PRODUCT_ID"/>
-          <PropertyRef Name="CUSTOMER_GROUP"/>
-          <PropertyRef Name="IBP_CUSTOMER"/>
-          <PropertyRef Name="CLASS_NUM"/>
-          <PropertyRef Name="CLASS_NAME"/>
-          <PropertyRef Name="CHAR_NUM"/>
-          <PropertyRef Name="CHAR_NAME"/>
-          <PropertyRef Name="CHARVAL_NUM"/>
-          <PropertyRef Name="CHAR_VALUE"/>
-          <PropertyRef Name="IBPCHAR_CHK"/>
+        <PropertyRef Name="LOCATION_ID"/>
+        <PropertyRef Name="PRODUCT_ID"/>
         </Key>
         <Property Name="LOCATION_ID" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="LOCATION_DESC" Type="Edm.String" MaxLength="4" Nullable="false"/>
         <Property Name="PRODUCT_ID" Type="Edm.String" MaxLength="40" Nullable="false"/>
+        <Property Name="PROD_DESC" Type="Edm.String" MaxLength="40" Nullable="false"/>
         <Property Name="CUSTOMER_GROUP" Type="Edm.String" MaxLength="20" Nullable="false"/>
         <Property Name="IBP_CUSTOMER" Type="Edm.String" MaxLength="10" Nullable="false"/>
         <Property Name="CLASS_NUM" Type="Edm.String" MaxLength="20" Nullable="false"/>
         <Property Name="CLASS_NAME" Type="Edm.String" MaxLength="20" Nullable="false"/>
+        <Property Name="CLASS_DESC" Type="Edm.String" MaxLength="150" Nullable="false"/>
+        <Property Name="CHAR_DESC" Type="Edm.String" MaxLength="150" Nullable="false"/>
         <Property Name="CHAR_NUM" Type="Edm.String" MaxLength="30" Nullable="false"/>
         <Property Name="CHAR_NAME" Type="Edm.String" MaxLength="30" Nullable="false"/>
         <Property Name="CHARVAL_NUM" Type="Edm.String" MaxLength="70" Nullable="false"/>
         <Property Name="CHAR_VALUE" Type="Edm.String" MaxLength="70" Nullable="false"/>
+        <Property Name="CHARVAL_DESC" Type="Edm.String" MaxLength="150" Nullable="false"/>
         <Property Name="IBPCHAR_CHK" Type="Edm.Boolean" Nullable="false"/>
-      </EntityType>
+        </EntityType>
       <EntityType Name="getLocProdActDemandAPI">
         <Key>
           <PropertyRef Name="LOCATION_ID"/>
@@ -79,17 +75,26 @@
       <Annotations Target="BTPCPIService.getLocProdCharAPI/CLASS_NAME" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="CLASS_NAME"/>
       </Annotations>
+      <Annotations Target="BTPCPIService.getLocProdCharAPI/CLASS_DESC" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLASS_DESC"/>
+      </Annotations>
       <Annotations Target="BTPCPIService.getLocProdCharAPI/CHAR_NUM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="CHAR_NUM"/>
       </Annotations>
       <Annotations Target="BTPCPIService.getLocProdCharAPI/CHAR_NAME" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="CHAR_NAME"/>
       </Annotations>
+      <Annotations Target="BTPCPIService.getLocProdCharAPI/CHAR_NAME" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CHAR_DESC"/>
+      </Annotations>
       <Annotations Target="BTPCPIService.getLocProdCharAPI/CHARVAL_NUM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="CHARVAL_NUM"/>
       </Annotations>
       <Annotations Target="BTPCPIService.getLocProdCharAPI/CHAR_VALUE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="CHAR_VALUE"/>
+      </Annotations>
+      <Annotations Target="BTPCPIService.getLocProdCharAPI/CHARVAL_NUM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CHARVAL_DESC"/>
       </Annotations>
       <Annotations Target="BTPCPIService.getLocProdCharAPI/IBPCHAR_CHK" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="IBPCHAR_CHK"/>

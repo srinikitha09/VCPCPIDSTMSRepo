@@ -4,17 +4,20 @@ using {ConfigProd as external} from './external/ConfigProd.csn';
 service CatalogService @(impl: './cat-service.js') {
     // @readonly entity Books as projection on my.Books;
 
-    entity getLocProdCharAPI      as projection on external.getLocProdCharAPI {
+     entity getLocProdCharAPI  as projection on external.getLocProdCharAPI {
         key LOCATION_ID,
             PRODUCT_ID,
             CUSTOMER_GROUP,
             IBP_CUSTOMER,
             CLASS_NUM,
             CLASS_NAME,
+            CLASS_DESC,
             CHAR_NUM,
             CHAR_NAME,
+            CHAR_DESC,
             CHARVAL_NUM,
             CHAR_VALUE,
+            CHARVAL_DESC,
             IBPCHAR_CHK
     };
 
@@ -32,6 +35,6 @@ service CatalogService @(impl: './cat-service.js') {
         ORD_QTY,
         ADJ_QTY
     };
-    entity getLocProdActDemandAPICopy as projection on external.getLocProdActDemandAPI 
+    entity getLocProdActDemandAPICopy as projection on external.getLocProdActDemandAPI;
 
 }

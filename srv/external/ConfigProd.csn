@@ -50,6 +50,12 @@
           "length": 20,
           "notNull": true
         },
+        "CLASS_DESC": {
+          "key": true,
+          "type": "cds.String",
+          "length": 150,
+          "notNull": true
+        },
         "CHAR_NUM": {
           "key": true,
           "type": "cds.String",
@@ -62,6 +68,12 @@
           "length": 30,
           "notNull": true
         },
+        "CHAR_DESC": {
+          "key": true,
+          "type": "cds.String",
+          "length": 150,
+          "notNull": true
+        },
         "CHARVAL_NUM": {
           "key": true,
           "type": "cds.String",
@@ -72,6 +84,12 @@
           "key": true,
           "type": "cds.String",
           "length": 70,
+          "notNull": true
+        },
+        "CHARVAL_DESC": {
+          "key": true,
+          "type": "cds.String",
+          "length": 150,
           "notNull": true
         },
         "IBPCHAR_CHK": {
