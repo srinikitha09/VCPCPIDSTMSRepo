@@ -36,5 +36,4 @@ service CatalogService @(impl: './cat-service.js') {
         ADJ_QTY
     };
     entity getLocProdActDemandAPICopy as projection on external.getLocProdActDemandAPI;
-
 }
