@@ -8,6 +8,7 @@ build-parameters:
   before-all:
     - builder: custom
       commands:
+        - npm install
         - npx -p @sap/cds-dk cds build --production
 modules:
   - name: config_products_cpids-srv
