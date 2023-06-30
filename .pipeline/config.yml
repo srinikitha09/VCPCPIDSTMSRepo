@@ -15,7 +15,7 @@ general:
   buildTool: 'mta'
   pipeline: "sap-ui5-cf"
 service:
-  buildToolVersion: "MBTJ11N16"
+  buildToolVersion: "MBTJ11N14"
 
 ### Step-specific configuration
 
